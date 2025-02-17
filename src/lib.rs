@@ -32,6 +32,8 @@ fn check_for_gltf_extras(
                         Err(err) => warn!("Failed to make deserializer for {component_type:?}: {err}")
                     }
 
+                } else {
+                    warn!("component not found: {component_path}");
                 }
             }
         }
